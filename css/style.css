@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo Tammudu 2', cursive;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+.container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    background-color: #ecf0f1;
+}
+
+.content {
+    position: relative;
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    height: 50%;
+
+    background-color: #ffffff;
+
+    border-radius: .8rem;
+}
+
+.content::before {
+    content: '';
+
+    position: absolute;
+    background-color: seagreen;
+
+    width: 40%;
+    height: 100%;
+
+    border-radius: .8rem;
+}
+
+.title {
+    text-transform: capitalize;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.title-primary {
+    color: #ffffff;
+}
+
+.title-secondary {
+    color: seagreen;
+}
+
+.description {
+    font-size: 1rem;
+    font-weight: 300;
+
+    line-height: 1.8rem;
+}
+
+.description-primary {
+    color: #ffffff;
+}
+
+.description-secondary {
+    color: seagreen;
+}
+
+.btn {
+    color: #ffffff;
+    padding: .7rem 3.6rem;
+
+    font-weight: bold;
+
+    border-radius: 1.2rem;
+
+    text-transform: uppercase;  
+    transition: .75s;
+}
+
+.btn-primary {
+    border: 2px solid #ffffff;
+
+    background-color: transparent;   
+}
+
+.btn-primary:hover {
+    color:seagreen;
+    background-color: #ffffff;
+}
+
+.first-content {
+    display: flex;
+}
+
+.first-column {
+    text-align: center;
+    flex: 1 0 auto;
+
+    z-index: 10;
+}
+
+.second-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: center;
+    
+    flex: 2 0 auto;
+}
+
+.list-social-media {
+    display: flex;
+    list-style-type: none;
+}
+
+.item-social-media {
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+
+    width: 2.4rem;
+    height: 2.4rem;
+    
+    text-align: center;
+    line-height: 2.9rem;
+}
+
+.item-social-media a {
+    color: #95a5a6;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.second-content {
+    position: absolute;
+    display: none;
+}
+
