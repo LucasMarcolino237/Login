@@ -130,7 +130,7 @@ body {
     text-align: center;
     width: 40%;
 
-    z-index: 10;
+    z-index: 13;
 }
 
 .second-column {
@@ -250,12 +250,8 @@ body {
 
     left: 60%;
     
+    z-index: 12;
     animation: slidein 1.75s;
-}
-
-.sign-in-js .first-content .second-column {
-    position: relative;
-    animation: deslocamento 3s;
 }
 
 .sign-up-js .second-content .first-column,
@@ -279,37 +275,68 @@ body {
 
     left: 0;
 
+    z-index: 12;
     animation: slideout 1.75s;
 }
 
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+
+    position: relative;
+    animation: deslocamentoEsq 1.3s;
+}
+
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+
+    position: relative;
+    animation: deslocamentoDir 1.3s;
+}
+
 /* Animação CSS do conteúdo */
-@keyframes deslocamento {
+@keyframes deslocamentoEsq {
     from {
         left: 0;
         opacity: 1;
+        z-index: 12;
     }
 
-    25% {
-        left: -20%;
-        opacity: .75;
-    }
 
     50% {
-        left: -30%;
-        opacity: .5;
+        left: -8%;
+        opacity: .2;
+        
     }
 
-    75% {
-        left: -40%;
-        opacity: .25;
-    }
 
     to {
-        left: -50%;
+        left: -11%;
         opacity: 0;
+        z-index: -1;
     }
 }
 
+@keyframes deslocamentoDir {
+    from {
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+
+
+    50% {
+        left: 8%;
+        opacity: .2;
+        
+    }
+
+
+    to {
+        left: 11%;
+        opacity: 0;
+        z-index: -1;
+    }
+}
 
 /* Animação CSS do conetent:before */
 @keyframes slidein {
@@ -320,17 +347,17 @@ body {
     }
 
     25% {
-        left: 10%;
+        left: 5%;
         width: 50%;
     }
 
     50% {
-        left: 30%;
+        left: 25%;
         width: 60%;
     }
 
     75% {
-        left: 50%;
+        left: 45%;
         width: 50%;
     }
 
@@ -348,17 +375,17 @@ body {
     }
 
     25% {
-        left: 50%;
+        left: 45%;
         width: 50%;
     }
 
     50% {
-        left: 30%;
+        left: 25%;
         width: 60%;
     }
 
     75% {
-        left: 10%;
+        left: 15%;
         width: 50%;
     }
 
