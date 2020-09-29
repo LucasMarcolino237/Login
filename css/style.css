@@ -48,6 +48,8 @@ body {
 
     border-top-left-radius: .8rem;
     border-bottom-left-radius: .8rem;
+
+    z-index: 12;
 }
 
 .title {
@@ -232,13 +234,28 @@ body {
     z-index: -1;
 }
 
-.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .first-column {
+    z-index: 13;
+}
+
 .sign-in-js .second-content .second-column {
     z-index: 11;
 }
 
 .sign-in-js .content::before {
+    border-radius: 0;
+
+    border-top-right-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+
     left: 60%;
+    
+    animation: slidein 1.75s;
+}
+
+.sign-in-js .first-content .second-column {
+    position: relative;
+    animation: deslocamento 3s;
 }
 
 .sign-up-js .second-content .first-column,
@@ -246,11 +263,107 @@ body {
     z-index: -1;
 }
 
-.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .first-column {
+    z-index: 13;
+}
+
 .sign-up-js .first-content .second-column {
     z-index: 11;
 }
 
-.sign-in-js .content::before {
+.sign-up-js .content::before {
+    border-radius: 0;
+
+    border-top-left-radius: .8rem;
+    border-bottom-left-radius: .8rem;
+
     left: 0;
+
+    animation: slideout 1.75s;
+}
+
+/* Animação CSS do conteúdo */
+@keyframes deslocamento {
+    from {
+        left: 0;
+        opacity: 1;
+    }
+
+    25% {
+        left: -20%;
+        opacity: .75;
+    }
+
+    50% {
+        left: -30%;
+        opacity: .5;
+    }
+
+    75% {
+        left: -40%;
+        opacity: .25;
+    }
+
+    to {
+        left: -50%;
+        opacity: 0;
+    }
+}
+
+
+/* Animação CSS do conetent:before */
+@keyframes slidein {
+
+    from {
+        left: 0;
+        width: 40%;
+    }
+
+    25% {
+        left: 10%;
+        width: 50%;
+    }
+
+    50% {
+        left: 30%;
+        width: 60%;
+    }
+
+    75% {
+        left: 50%;
+        width: 50%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+
+    from {
+        left: 60%;
+        width: 40%;
+    }
+
+    25% {
+        left: 50%;
+        width: 50%;
+    }
+
+    50% {
+        left: 30%;
+        width: 60%;
+    }
+
+    75% {
+        left: 10%;
+        width: 50%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
 }
